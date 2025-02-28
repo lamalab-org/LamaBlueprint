@@ -1,11 +1,11 @@
 {
-  "author": "Florian Maas",
-  "author_github_handle": "fpgmaas",
+  "author": "LAMA lab",
+  "author_github_handle": "lamalab-org",
   "deptry": [
     "y",
     "n"
   ],
-  "email": "fpgmaas@gmail.com",
+  "email": "lamalab@lamalab.org",
   "include_github_actions": [
     "y",
     "n"

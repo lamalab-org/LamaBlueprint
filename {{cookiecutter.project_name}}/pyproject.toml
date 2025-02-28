@@ -39,10 +39,9 @@ license = { text = "{{cookiecutter.open_source_license}}" }
 
 [project.optional-dependencies]
 optional_dependencies = []
-all = ["{{cookiecutter.project_name}}[visualization,dev,docs]"]
+all = ["{{cookiecutter.project_name}}[dev,docs]"]
 dev = ["pytest", 'ruff', "pytest-cov", 'pytest-dotenv']
 docs = ["mkdocs", "mkdocs-material", "mkdocstrings[python]"]
-visualization = ["matplotlib>=3.8.2", "plotly>=5.18.0", "nomic>=1.0.0"]
 
 [project.scripts]
 
