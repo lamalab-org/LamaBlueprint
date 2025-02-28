@@ -102,8 +102,6 @@ extra:
       link: https://github.com/lamalab-org/
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/jablonkagroup
-#     - icon: fontawesome/brands/linkedin
-#       link: https://www.linkedin.com/in/willettjames/
 
 extra_css:
   - stylesheets/extra.css
