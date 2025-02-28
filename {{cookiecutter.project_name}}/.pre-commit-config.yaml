@@ -1,22 +1,25 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: "v5.0.0"
+    rev: v4.6.0
     hooks:
-      - id: check-case-conflict
-      - id: check-merge-conflict
-      - id: check-toml
-      - id: check-yaml
-      - id: check-json
-        exclude: ^.devcontainer/devcontainer.json
-      - id: pretty-format-json
-        exclude: ^.devcontainer/devcontainer.json
-        args: [--autofix]
-      - id: end-of-file-fixer
       - id: trailing-whitespace
-
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: pretty-format-json
+        args:
+          - "--autofix"
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.6.3"
+    # Ruff version.
+    rev: v0.6.8
     hooks:
+      # Run the linter.
       - id: ruff
-        args: [--exit-non-zero-on-fix]
+        types_or: [python, pyi, jupyter]
+        exclude: (reports|scripts|data)/.*
+      # Run the formatter.
       - id: ruff-format
+        types_or: [python, pyi, jupyter]
+        exclude: (reports/scripts|data)/.*
+ci:
+  autofix_prs: false

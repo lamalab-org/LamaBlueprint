@@ -1,19 +1,7 @@
 {
   "author": "Florian Maas",
   "author_github_handle": "fpgmaas",
-  "codecov": [
-    "y",
-    "n"
-  ],
   "deptry": [
-    "y",
-    "n"
-  ],
-  "devcontainer": [
-    "y",
-    "n"
-  ],
-  "dockerfile": [
     "y",
     "n"
   ],
