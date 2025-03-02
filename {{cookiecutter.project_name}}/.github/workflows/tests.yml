@@ -1,3 +1,4 @@
+{% raw %}
 name: Tests
 
 on:
@@ -48,3 +49,4 @@ jobs:
           CI: true
         run: |
           pytest tests -m "not requires_api_key"
+{% endraw %}

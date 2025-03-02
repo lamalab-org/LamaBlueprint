@@ -17,12 +17,9 @@ This is a modern Cookiecutter template that can be used to initiate a Python pro
 - Pre-commit hooks with [pre-commit](https://pre-commit.com/)
 - Code quality with [ruff](https://github.com/charliermarsh/ruff), [mypy](https://mypy.readthedocs.io/en/stable/) and [deptry](https://github.com/fpgmaas/deptry/).
 - Publishing to [PyPI](https://pypi.org) by creating a new release on GitHub
-- Testing and coverage with [pytest](https://docs.pytest.org/en/7.1.x/) and [codecov](https://about.codecov.io/)
+- Testing and coverage with [pytest](https://docs.pytest.org/en/7.1.x/)
 - Documentation with [MkDocs](https://www.mkdocs.org/)
 - Compatibility testing for multiple versions of Python with [tox-uv](https://github.com/tox-dev/tox-uv)
-- Containerization with [Docker](https://www.docker.com/)
-- Development environment with [VSCode devcontainers](https://code.visualstudio.com/docs/devcontainers/containers)
-
 ---
 
 <p align="center">

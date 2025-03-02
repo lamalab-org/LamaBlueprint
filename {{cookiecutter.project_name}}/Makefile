@@ -20,11 +20,7 @@ check: ## Run code quality tools.
 .PHONY: test
 test: ## Test the code with pytest
 	@echo "🚀 Testing code: Running pytest"
-{%- if cookiecutter.codecov == "y"%}
-	@uv run python -m pytest --cov --cov-config=pyproject.toml --cov-report=xml
-{%- else %}
 	@uv run python -m pytest --doctest-modules
-{%- endif%}
 
 .PHONY: build
 build: clean-build ## Build wheel file

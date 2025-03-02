@@ -16,11 +16,8 @@ nav:
       - Dependency management with uv: features/uv.md
       - Publishing to PyPI: features/publishing.md
       - Testing with Pytest: features/pytest.md
-      - Test coverage with codecov: features/codecov.md
       - Documentation with MkDocs: features/mkdocs.md
       - Compatibility testing with Tox: features/tox.md
-      - Containerization with Docker: features/docker.md
-      - Devcontainer with VSCode: features/devcontainer.md
   - Tutorial: tutorial.md
   - Prompt Arguments: prompt_arguments.md
 plugins:
