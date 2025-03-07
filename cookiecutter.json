@@ -11,8 +11,8 @@
     "n"
   ],
   "layout": [
-    "flat",
-    "src"
+    "src",
+    "flat"
   ],
   "mkdocs": [
     "y",
