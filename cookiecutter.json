@@ -1,30 +1,18 @@
 {
-  "author": "Florian Maas",
-  "author_github_handle": "fpgmaas",
-  "codecov": [
-    "y",
-    "n"
-  ],
+  "author": "LAMA lab",
+  "author_github_handle": "lamalab-org",
   "deptry": [
     "y",
     "n"
   ],
-  "devcontainer": [
-    "y",
-    "n"
-  ],
-  "dockerfile": [
-    "y",
-    "n"
-  ],
-  "email": "fpgmaas@gmail.com",
+  "email": "lamalab@lamalab.org",
   "include_github_actions": [
     "y",
     "n"
   ],
   "layout": [
-    "flat",
-    "src"
+    "src",
+    "flat"
   ],
   "mkdocs": [
     "y",

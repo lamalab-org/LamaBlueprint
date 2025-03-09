@@ -1,58 +1,111 @@
 site_name: {{cookiecutter.project_name}}
-repo_url: https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
 site_url: https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}
-site_description: {{cookiecutter.project_description}}
 site_author: {{cookiecutter.author}}
-edit_uri: edit/main/docs/
-repo_name: {{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
-copyright: Maintained by <a href="https://{{cookiecutter.author_github_handle}}.com">{{cookiecutter.author_github_handle}}</a>.
+site_description: {{cookiecutter.project_description}}
 
-nav:
-  - Home: index.md
-  - Modules: modules.md
-plugins:
-  - search
-  - mkdocstrings:
-      handlers:
-        python:
-          paths: [
-            {%- if cookiecutter.layout == "src" -%}
-            "src/{{cookiecutter.project_slug}}"
-            {%- else -%}
-            "{{cookiecutter.project_slug}}"
-            {%- endif -%}
-            ]
+# Repo information
+repo_name: {{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
+repo_url: https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
+
+copyright: LAMAlab
+
+docs_dir: docs
+site_dir: site
+
 theme:
   name: material
-  feature:
-    tabs: true
+  custom_dir: docs/stylesheets
+  # Use your logos here
+  # logo: static/cb_flask_white.png
+  # favicon: static/cb_flask_white.png
+  features:
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.annotate
+    - content.code.copy
+    - content.code.copy_button
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.tabs.sticky
+
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: white
-      accent: deep orange
+    - scheme: default
       toggle:
-        icon: material/brightness-7
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: deep orange
+      primary: custom
+      accent: purple
+
+    - scheme: slate
       toggle:
-        icon: material/brightness-4
+        icon: material/toggle-switch
         name: Switch to light mode
-  icon:
-    repo: fontawesome/brands/github
+      primary: custom
+      accent: lime
+
+  hide:
+    - navigation
+    - toc
+
+  font:
+    text: Roboto #Helvetica
+    code: Monaco #Roboto Mono
+
+plugins:
+  - search
+  - autorefs
+  # - social
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_symbol_type_toc: true
+            allow_inspection: true
+            show_submodules: true
+
+markdown_extensions:
+  - meta
+  - tables
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - toc:
+      permalink: '🔗'
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/{{cookiecutter.author_github_handle}}/{{cookiecutter.project_name}}
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/{{cookiecutter.project_name}}
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/lamalab-org/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/jablonkagroup
 
-markdown_extensions:
-  - toc:
-      permalink: true
-  - pymdownx.arithmatex:
-      generic: true
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md

@@ -68,18 +68,6 @@ documentation to your project. This includes automatically parsing
 your docstrings and adding them to the documentation. Documentation
 will be deployed to the `gh-pages` branch.
 
-**codecov**
-
-`"y"` or `"n"`. Adds code coverage checks with [codecov](https://about.codecov.io/).
-
-**dockerfile**
-
-`"y"` or `"n"`. Adds a simple [Dockerfile](https://docker.com).
-
-**devcontainer**
-
-`"y"` or `"n"`. Adds a [devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) specification to the project along with pre-installed pre-commit hooks and VSCode python extension configuration.
-
 **open_source_license**
 
 Choose a [license](https://choosealicense.com/). Options:
