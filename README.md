@@ -1,55 +1,67 @@
 <p align="center">
-  <img width="600" src="https://raw.githubusercontent.com/lamalab-org/cookiecutter-uv/main/docs/static/cookiecutter.svg">
-</p style = "margin-bottom: 2rem;">
-
----
-
-[![Build status](https://img.shields.io/github/actions/workflow/status/lamalab-org/cookiecutter-uv/main.yml?branch=main)](https://github.com/lamalab-org/cookiecutter-uv/actions/workflows/main.yml?query=branch%3Amain)
-[![Supported Python versions](https://img.shields.io/badge/python-3.9_%7C_3.10_%7C_3.11_%7C_3.12_%7C_3.13-blue?labelColor=grey&color=blue)](https://github.com/lamalab-org/cookiecutter-uv/blob/main/pyproject.toml)
-[![Docs](https://img.shields.io/badge/docs-gh--pages-blue)](https://lamalab-org.github.io/cookiecutter-uv/)
-[![License](https://img.shields.io/github/license/lamalab-org/cookiecutter-uv)](https://img.shields.io/github/license/lamalab-org/cookiecutter-uv)
-
-This is a modern Cookiecutter template that can be used to initiate a Python project with all the necessary tools for development, testing, and deployment. It supports the following features:
-
-- [uv](https://docs.astral.sh/uv/) for dependency management
-- Supports both [src and flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/).
-- CI/CD with [GitHub Actions](https://github.com/features/actions)
-- Pre-commit hooks with [pre-commit](https://pre-commit.com/)
-- Code quality with [ruff](https://github.com/charliermarsh/ruff), [mypy](https://mypy.readthedocs.io/en/stable/) and [deptry](https://github.com/fpgmaas/deptry/).
-- Publishing to [PyPI](https://pypi.org) by creating a new release on GitHub
-- Testing and coverage with [pytest](https://docs.pytest.org/en/7.1.x/)
-- Documentation with [MkDocs](https://www.mkdocs.org/)
-- Compatibility testing for multiple versions of Python with [tox-uv](https://github.com/tox-dev/tox-uv)
----
+  <img width="600" src="blueprint_logo_dark_mode.png" alt="LamaBlueprint logo">
+</p>
 
 <p align="center">
-  <a href="https://lamalab-org.github.io/cookiecutter-uv/">Documentation</a> - <a href="https://github.com/lamalab-org/cookiecutter-uv-example">Example</a>
+  <a href="https://github.com/lamalab-org/LamaBlueprint/actions/workflows/main.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/lamalab-org/LamaBlueprint/main.yml?branch=main" alt="Build status">
+  </a>
+  <a href="https://github.com/lamalab-org/LamaBlueprint/blob/main/pyproject.toml">
+    <img src="https://img.shields.io/badge/python-3.9_%7C_3.10_%7C_3.11_%7C_3.12_%7C_3.13-blue?labelColor=grey&color=blue" alt="Supported Python versions">
+  </a>
+  <a href="https://lamalab-org.github.io/LamaBlueprint/">
+    <img src="https://img.shields.io/badge/docs-gh--pages-blue" alt="Docs">
+  </a>
+  <a href="https://img.shields.io/github/license/lamalab-org/LamaBlueprint">
+    <img src="https://img.shields.io/github/license/lamalab-org/LamaBlueprint" alt="License">
+  </a>
 </p>
 
 ---
 
+# LamaBlueprint
+
+> **LamaBlueprint** is LamaLab’s opinionated, batteries‑included Cookiecutter template for starting modern Python projects.
+> It began life as a fork of [cookiecutter‑uv](https://github.com/fpgmaas/cookiecutter-uv) and has since been adapted and extended to match LamaLab’s tooling, conventions, and CI/CD workflow.
+
+The template provides everything you need to go from `git init` to a production‑ready Python package – with **zero manual yak‑shaving**.
+
+## What you get out‑of‑the‑box
+
+* **Dependency management** with [**uv**](https://docs.astral.sh/uv/)
+* Choice between [**src**](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)[ and ](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)[**flat**](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)[ project layouts](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) 🗂️
+* **CI/CD** pipelines via **GitHub Actions** (lint, type‑check, tests, release) ⚙️
+* **Pre‑commit** hooks powered by [pre‑commit](https://pre-commit.com/) 🪄
+* **Code quality**: [ruff](https://github.com/astral-sh/ruff) (linter/formatter) • [mypy](https://mypy.readthedocs.io/) (static types) • [deptry](https://github.com/fpgmaas/deptry/) (unused/implicit deps)
+* **Testing & coverage** with [pytest](https://docs.pytest.org/en/stable/) ✅
+* **Docs** generation with [MkDocs Material](https://www.mkdocs.org/) 📚
+* **Multi‑Python** compatibility tests via [tox‑uv](https://github.com/tox-dev/tox-uv) 🐍
+* **One‑click publishing** to PyPI by creating a GitHub release 🚀
+
 ## Quickstart
 
-On your local machine, navigate to the directory in which you want to
-create a project directory, and run the following command:
-
 ```bash
-uvx cookiecutter https://github.com/lamalab-org/cookiecutter-uv.git
+# with uv already installed
+a) uvx cookiecutter https://github.com/lamalab-org/LamaBlueprint.git
+
+# or the traditional way
+b) pip install --user cookiecutter
+   cookiecutter https://github.com/lamalab-org/LamaBlueprint.git
 ```
 
-or if you don't have `uv` installed yet:
+Answer a handful of prompts and the template will scaffold your new project.
+Then `cd` into the freshly‑created directory and follow the generated `` to finish the setup (creating the lock‑file, activating the pre‑commit hooks, etc.).
 
-```bash
-pip install cookiecutter
-cookiecutter https://github.com/lamalab-org/cookiecutter-uv.git
-```
+## Migrating from cookiecutter‑uv
 
-Follow the prompts to configure your project. Once completed, a new directory containing your project will be created. Then navigate into your newly created project directory and follow the instructions in the `README.md` to complete the setup of your project.
+LamaBlueprint tracks upstream fixes while adding LamaLab‑specific polish (narrower lint rules, stricter CI presets, an extended pre‑commit line‑up, etc.).
+If you are already using **cookiecutter‑uv** you can opt‑in to LamaBlueprint by:
+
+1. Re‑generating your project in a separate branch using LamaBlueprint.
+2. Cherry‑picking the rendered configuration files (such as ``, **CI workflow files**, and **docs configuration**).
+3. Adjusting project‑specific code where necessary.
 
 ## Acknowledgements
 
-This project is build on top of [Florian Maas's cookiecutter-uv template](https://github.com/fpgmaas/cookiecutter-uv).
-This project is partially based on [Audrey
-Feldroy\'s](https://github.com/audreyfeldroy)\'s great
-[cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
-repository.
+* Originally based on [Florian Maas’s ](https://github.com/fpgmaas/cookiecutter-uv)[**cookiecutter‑uv**](https://github.com/fpgmaas/cookiecutter-uv).
+* Some layout ideas are inspired by [Audrey Feldroy’s ](https://github.com/audreyfeldroy/cookiecutter-pypackage)[**cookiecutter‑pypackage**](https://github.com/audreyfeldroy/cookiecutter-pypackage).
