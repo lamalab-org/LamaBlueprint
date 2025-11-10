@@ -54,4 +54,4 @@ git push origin main
 
 You are now ready to start development on your project!
 
-Repository initiated with [lamalab-org/cookiecutter-uv](https://github.com/lamalab-org/cookiecutter-uv).
+Repository initiated with [lamalab-org/LamaBlueprint](https://github.com/lamalab-org/LamaBlueprint).
