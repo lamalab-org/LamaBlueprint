@@ -7,7 +7,9 @@ name = "{{cookiecutter.project_name}}"
 version = "0.0.1"
 description = "{{cookiecutter.project_description}}"
 authors = [{ name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}" }]
-dependencies = []
+dependencies = [
+    "lama-aesthetics @ git+https://github.com/lamalab-org/lama-aesthetics.git@main",
+]
 requires-python = ">=3.9"
 readme = "README.md"
 license = { text = "{{cookiecutter.open_source_license}}" }
